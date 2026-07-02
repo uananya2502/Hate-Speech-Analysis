@@ -1,0 +1,17 @@
+2026-06-15 21:33:34.540717,video_scraping,COMPLETED,Finished category: infrastructure
+2026-06-15 21:34:08.349574,video_scraping,COMPLETED,Finished category: administration
+2026-06-15 21:35:27.165351,video_scraping,COMPLETED,Finished category: controversies
+2026-06-15 21:36:00.596921,video_scraping,COMPLETED,Finished category: rankings
+2026-06-15 21:47:27.739834,video_scraping,STOPPED,"Category: infrastructure, Queries completed: 47, Quota: 9200"
+2026-06-17 11:53:35.377177,video_scraping,STOPPED,"Category: infrastructure, Queries completed: 93, Quota: 9200"
+2026-06-18 17:40:57.421353,video_scraping,STOPPED,"Category: faculty_research, Queries completed: 138, Quota: 9200"
+2026-06-19 15:18:42.013481,video_scraping,STOPPED,"Category: faculty_research, Queries completed: 100, Quota: 9300"
+2026-06-25 12:09:45.083704,video_scraping,STOPPED,"Category: faculty_research, Queries completed: 66, Quota: 9200"
+2026-06-25 12:10:46.949637,video_scraping,STOPPED,"Category: faculty_research, Queries completed: 66, Quota: 9200"
+2026-06-29 12:08:59.064606,comment_scraping,FAILED,Category failed: faculty_research
+2026-06-30 20:46:33.153249,video_scraping,STOPPED,"Category: controversies, Queries completed: 47, Quota: 9300"
+2026-06-30 20:46:44.685087,comment_scraping,FAILED,Category failed: controversies
+2026-06-30 20:47:21.387020,comment_scraping,FAILED,Category failed: controversies
+2026-06-30 21:20:01.825100,comment_scraping,FAILED,Category failed: controversies
+2026-07-02 11:55:46.474758,video_scraping,STOPPED,"Category: rankings, Queries completed: 19, Quota: 9200"
+2026-07-02 11:55:50.275580,video_scraping,STOPPED,"Category: rankings, Queries completed: 15, Quota: 9300"
