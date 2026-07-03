@@ -21,7 +21,7 @@ sys.path.append(
     )
 )
 
-import config
+import config as config
 
 from scripts.utils import (
     append_csv,

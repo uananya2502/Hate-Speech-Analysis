@@ -1,5 +1,5 @@
 from googleapiclient.discovery import build
-import config
+import config as config
 
 youtube = build(
     "youtube",
