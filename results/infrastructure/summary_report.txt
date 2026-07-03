@@ -1,0 +1,103 @@
+============================================================
+VIDEO EDA SUMMARY REPORT
+============================================================
+
+Category : infrastructure
+
+Rows : 1947
+Columns : 34
+Memory Usage : 3.45 MB
+
+Unique Universities : 93
+Unique Channels : 1042
+
+Missing Values
+------------------------
+video_id                    0
+university_name             0
+title                       0
+description               303
+channel_name                0
+upload_date                 0
+upload_year                 0
+views                       0
+likes                       0
+comment_count               0
+duration                    0
+language                    0
+video_url                   0
+relevance_score             0
+relevance_label             0
+clean_title                 0
+clean_description         305
+combined_text               0
+title_word_count            0
+title_char_count            0
+description_word_count      0
+description_char_count      0
+combined_word_count         0
+combined_char_count         0
+emoji_count                 0
+hashtag_count               0
+mention_count               0
+exclamation_count           0
+question_count              0
+engagement_rate             0
+log_views                   0
+log_likes                   0
+log_comments                0
+video_age_days              0
+dtype: int64
+
+============================================================
+DATASET SUMMARY
+============================================================
+
+Total Universities : 93
+Total Channels : 1042
+
+Average Views : 82692.3
+Average Likes : 1526.68
+Average Comments : 50.49
+Average Engagement : 0.02584
+
+
+======================================================================
+KEY INSIGHTS
+======================================================================
+
+Most Viewed Video
+-----------------------------
+Title : Why IIT Bombay hostels are best ? #iit #iitbombay #iitjee #jee #campus #hostel #hostellife #pongal
+University : IIT Bombay
+Views : 13476321
+
+Most Liked Video
+-----------------------------
+Title : Why IIT Bombay hostels are best ? #iit #iitbombay #iitjee #jee #campus #hostel #hostellife #pongal
+University : IIT Bombay
+Likes : 467007
+
+Most Commented Video
+-----------------------------
+Title : KIIT University Shocker | After Death On Campus - Nepalese Students Thrown Out | Akash Banerjee
+University : KIIT University
+Comments : 17975
+
+Highest Engagement Video
+-----------------------------
+Title : Sharda University Campus Tour 2026 | Facilities, Student Life &amp; Achievements | Study in India
+University : Sharda University
+Engagement : 0.66667
+
+======================================================================
+GENERAL STATISTICS
+======================================================================
+
+Average Views : 82692.3
+Median Views : 5415.0
+Average Likes : 1526.68
+Average Comments : 50.49
+Average Engagement : 0.02584
+Unique Universities : 93
+Unique Channels : 1042
