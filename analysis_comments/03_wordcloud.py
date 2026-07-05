@@ -16,22 +16,37 @@ Author : Ananya Upadhyay
 ============================================================
 """
 
+import os
+import sys
+
+# ==========================================================
+# ADD PROJECT ROOT TO PYTHON PATH
+# ==========================================================
+
+PROJECT_ROOT = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        ".."
+    )
+)
+
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 # ==========================================================
 # IMPORT LIBRARIES
 # ==========================================================
 
-import os
-import re
-
 import pandas as pd
-
 import matplotlib.pyplot as plt
 
-from wordcloud import WordCloud
-from wordcloud import STOPWORDS
-
 from collections import Counter
+from wordcloud import WordCloud
 
+from resources.text_normalization import (
+    normalize_text,
+    ALL_STOPWORDS
+)
 
 # ==========================================================
 # FOLDERS
@@ -149,171 +164,6 @@ def dataset_information(df):
 
     )
 # ==========================================================
-# CUSTOM STOPWORDS
-# ==========================================================
-
-CUSTOM_STOPWORDS = STOPWORDS.union({
-
-    # ------------------------------------------------------
-    # Education
-    # ------------------------------------------------------
-
-    "college","colleges","university","universities",
-    "campus","student","students","education",
-    "faculty","teacher","teachers","professor",
-    "hostel","hostels","mess","canteen",
-    "library","department","branch","course",
-    "courses","placement","placements",
-    "admission","admissions","semester","sem",
-    "class","classes","exam","exams",
-
-    # ------------------------------------------------------
-    # YouTube
-    # ------------------------------------------------------
-
-    "video","videos","youtube","channel",
-    "subscribe","subscriber","subscribers",
-    "subscribed","watch","watching",
-    "watched","comment","comments",
-    "like","likes","liked",
-    "share","shared",
-    "review","tour","short","shorts",
-    "vlog",
-
-    # ------------------------------------------------------
-    # Common English
-    # ------------------------------------------------------
-
-    "the","this","that","these","those",
-    "is","are","was","were","be","been",
-    "being","am","do","does","did",
-    "doing","done","have","has","had",
-    "having","will","would","should",
-    "can","could","may","might","must",
-    "shall",
-
-    "and","or","but","if","then","than",
-    "because","while","when","where",
-    "what","which","who","whom","whose",
-    "why","how",
-
-    "very","really","quite","also",
-    "just","only","still","already",
-    "always","never","every","everyone",
-    "everything","nothing","something",
-
-    "one","two","three","first","second",
-    "many","much","more","less",
-    "good","great","nice",
-
-    "know","think","want","need","make",
-    "made","take","taken","come","coming",
-    "go","going","went","see","seen",
-    "look","looking","use","using",
-    "used","give","given","got","getting",
-
-    # ------------------------------------------------------
-    # Indian English
-    # ------------------------------------------------------
-
-    "sir","madam","mam","bro","bros",
-    "brother","bhai","bhaiya","didi",
-    "uncle","aunty","guys","friend",
-    "friends","hello","hi","thanks",
-    "thank","please","plz",
-
-    # ------------------------------------------------------
-    # Hindi
-    # ------------------------------------------------------
-
-    "hai","hain","tha","thi","the",
-    "ho","hona","hoga","kar","karo",
-    "karna","ki","ka","ke","ko",
-    "se","me","mai","mera","meri",
-    "mere","ham","hum","aap","apka",
-    "apki","apke","tum","tumhara",
-    "ye","yeh","yah","wo","woh",
-    "is","us","sab","sabhi",
-    "kya","kyu","kyun","kaise",
-    "aisa","aisi","aise",
-    "wala","wali","wale",
-    "aur","ya","nahi","nahin",
-    "mat","fir","phir","ab",
-    "to","bhi","bas","bahut",
-    "bohot",
-
-    # ------------------------------------------------------
-    # Emoji Words
-    # ------------------------------------------------------
-
-    "lol","lmao","omg","wtf","xd",
-
-    # ------------------------------------------------------
-    # Numbers
-    # ------------------------------------------------------
-
-    "2023","2024","2025","2026"
-
-})
-
-
-# ==========================================================
-# CLEAN TEXT
-# ==========================================================
-
-def clean_wordcloud_text(text):
-
-    text = str(text).lower()
-
-    # Remove URLs
-    text = re.sub(
-        r"http\S+|www\S+|https\S+",
-        " ",
-        text
-    )
-
-    # Remove Emails
-    text = re.sub(
-        r"\S+@\S+",
-        " ",
-        text
-    )
-
-    # Remove Numbers
-    text = re.sub(
-        r"\d+",
-        " ",
-        text
-    )
-
-    # Keep English + Hindi Characters
-    text = re.sub(
-        r"[^a-zA-Z\u0900-\u097F\s]",
-        " ",
-        text
-    )
-
-    # Remove Extra Spaces
-    text = re.sub(
-        r"\s+",
-        " ",
-        text
-    ).strip()
-
-    words = text.split()
-
-    cleaned = []
-
-    for word in words:
-
-        if word not in CUSTOM_STOPWORDS and len(word) > 2:
-
-            cleaned.append(word)
-
-    return cleaned
-
-
-# ==========================================================
 # PREPARE TEXT
 # ==========================================================
 
@@ -321,26 +171,31 @@ def prepare_text(df, sentiment=None):
 
     if sentiment is None:
 
-        subset = df
+        subset = df.copy()
 
     else:
 
         subset = df[
+
             df["sentiment"] == sentiment
-        ]
+
+        ].copy()
 
     words = []
 
     for comment in subset["combined_comment"].fillna(""):
 
-        words.extend(
+        cleaned = normalize_text(comment)
 
-            clean_wordcloud_text(comment)
+        if cleaned:
 
-        )
+            words.extend(
+
+                cleaned.split()
+
+            )
 
     return words
-
 # ==========================================================
 # GENERATE WORD CLOUD
 # ==========================================================
@@ -423,7 +278,7 @@ def generate_wordcloud(
 
         background_color="white",
 
-        stopwords=CUSTOM_STOPWORDS,
+        stopwords=ALL_STOPWORDS,
 
         max_words=500,
 
@@ -883,3 +738,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
+#.   python analysis_comments/03_wordcloud.py
