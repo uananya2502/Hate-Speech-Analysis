@@ -1,0 +1,94 @@
+university_name,Average_Likes,Median_Likes,Maximum_Likes,Total_Comments
+IIT Bombay,9.42,0.0,13323,4395
+IIT Guwahati,8.61,1.0,1441,740
+IIT Roorkee,6.48,1.0,651,1050
+NIT Warangal,6.33,0.0,3159,2214
+IIT Jodhpur,6.21,0.0,616,825
+IIT Patna,5.57,1.0,1101,712
+IIT Kharagpur,5.35,1.0,294,395
+KIIT University,5.19,0.0,16718,19474
+BITS Pilani,5.15,0.0,2585,1939
+IIT Madras,4.86,0.0,2194,3397
+O.P. Jindal Global University,4.75,4.0,11,4
+IIT Delhi,4.23,0.0,380,1005
+Amity University,4.18,0.0,610,858
+People's University Bhopal,3.76,0.0,511,553
+IIT (BHU) Varanasi,3.68,0.0,490,694
+IIT Hyderabad,3.49,1.0,533,1425
+NIT Bhopal,3.49,1.0,319,311
+IIT Kanpur,3.37,1.0,89,335
+ITM University Raipur,3.17,0.0,56,48
+Ashoka University,3.05,0.0,48,59
+IIT Mandi,2.99,1.0,140,451
+IIIT Allahabad,2.83,0.0,1353,1180
+Bennett University,2.73,0.0,677,1306
+NIT Trichy,2.57,0.0,367,2830
+Jawaharlal Nehru University,2.36,0.0,107,717
+Delhi University,2.23,0.0,424,2104
+IIT Indore,2.15,0.0,199,672
+IIIT Bangalore,2.07,1.0,114,455
+IIIT Hyderabad,1.96,0.0,218,635
+SRM Institute of Science and Technology,1.96,0.0,450,1250
+Symbiosis International University,1.93,0.0,371,808
+IIT Gandhinagar,1.88,0.0,73,649
+NIT Kurukshetra,1.85,0.0,193,805
+NIT Silchar,1.8,0.0,238,1738
+Lovely Professional University,1.76,0.0,618,2915
+University of Hyderabad,1.76,0.0,292,633
+Banaras Hindu University,1.73,0.0,235,1117
+NIT Calicut,1.68,0.0,67,536
+NIT Allahabad,1.66,0.0,157,725
+NIT Raipur,1.65,0.0,269,1120
+IIIT Delhi,1.58,0.0,111,418
+NIT Patna,1.54,0.0,178,1074
+NIT Durgapur,1.5,0.0,116,402
+RV University,1.38,0.0,32,328
+NIT Jaipur,1.28,0.0,273,1611
+Christ University,1.27,0.0,57,672
+NIT Surathkal,1.27,0.0,24,98
+VIT Vellore,1.22,0.0,44,1179
+Galgotias University,1.22,0.0,146,3073
+Sharda University,1.2,0.0,105,519
+Aligarh Muslim University,1.17,0.0,74,660
+IIT Bhubaneswar,1.17,1.0,22,364
+NIT Nagaland,1.15,0.0,35,496
+Banasthali Vidyapith,1.1,0.0,103,595
+Jamia Millia Islamia,1.1,0.0,80,750
+PES University,1.1,0.0,39,291
+IIT Ropar,1.08,0.0,20,176
+NIT Arunachal Pradesh,1.04,0.0,32,300
+Nirma University,0.99,0.0,79,772
+SASTRA Deemed University,0.97,0.0,27,1194
+IIIT Bhopal,0.96,0.0,28,799
+NIT Jamshedpur,0.95,0.0,36,1400
+NIT Hamirpur,0.95,0.0,65,704
+IIIT Kottayam,0.91,1.0,38,896
+Manipal Academy of Higher Education,0.91,0.0,4,22
+Dhirubhai Ambani Institute of Information and Communication Technology,0.89,0.0,30,416
+IIIT Kancheepuram,0.89,0.0,12,307
+IIIT Guwahati,0.85,0.0,16,366
+JECRC University,0.84,0.0,44,885
+Manipal University Jaipur,0.83,0.0,43,1382
+Pondicherry University,0.82,0.0,103,1489
+VIT Bhopal University,0.8,0.0,65,1538
+IIIT Gwalior,0.79,0.0,27,399
+Chandigarh University,0.79,0.0,38,565
+Pandit Deendayal Energy University,0.79,0.0,12,106
+NIT Meghalaya,0.79,0.0,29,412
+Kalinga University Raipur,0.76,1.0,2,17
+IIIT Naya Raipur,0.71,0.0,11,313
+NIT Rourkela,0.7,0.0,9,115
+LNCT Bhopal,0.69,0.0,51,1521
+Poornima University,0.67,0.0,9,503
+University of Allahabad,0.66,0.0,24,1061
+IIIT Jabalpur,0.53,0.0,14,348
+IIIT Lucknow,0.53,0.0,11,781
+SAGE University Indore,0.52,0.0,15,776
+Ganpat University,0.51,0.0,8,255
+SAGE University Bhopal,0.47,0.0,4,148
+Oriental Institute of Science and Technology Bhopal,0.42,0.0,4,89
+North Eastern Hill University,0.38,0.0,32,1332
+Rabindranath Tagore University Bhopal,0.36,0.0,2,14
+Thapar Institute of Engineering and Technology,0.32,0.0,2,19
+Mansarovar Global University Bhopal,0.24,0.0,1,25
+Charotar University of Science and Technology,0.14,0.0,2,14
